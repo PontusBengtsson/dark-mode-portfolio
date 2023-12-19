@@ -1,0 +1,124 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Josefin Sans' , sans serif;
+    background: linear-gradient(180deg, #10091d 0%, #28193d 100%);
+    color: white;
+    transition: all 0,3s;
+}
+
+.background-gradient {
+    background-repeat: no-repeat;
+    height: 100vh;
+    position: fixed;
+    z-index: -1;
+}
+
+.logo {
+    position: fixed;
+    top: 80px;
+    left: 200px;
+    width: 100px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    padding-left: 200px;
+}
+.portrait {
+    height: 100vh;
+    filter: grayscale(1) brightness(0.7);
+}
+
+.title {
+   font-size:105px; 
+}
+
+.thin {
+font-weight: 100;
+}
+
+.thick {
+    font-weight: 500;
+}
+
+.dark-mode-button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 170px;
+}
+
+.dark-mode-night {
+    font-weight: 300;
+}
+
+.dark-mode-day{
+    font-weight: 300;
+    color:#ffffff4d
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    background-color: #afd0f1;
+    border-radius: 34px;
+    cursor: pointer;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height:0;
+}
+
+.slider {
+    position: absolute;
+    left:4px;
+    bottom: 4px;
+    height: 26px;
+    width: 26px;
+    transition: 0.4s;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.switch:has(input:checked){
+    background-color: #46315C;
+}
+
+.switch:has(input:focus) {
+    box-shadow:0 0 1px #46315C;
+}
+
+input:checked + .slider {
+    transform: translateX(26px);
+}
+
+@media screen and (max-width: 1024px) {
+    .portrait {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .portrait {
+        display: none;
+    }
+
+    .logo {
+       left:60px; 
+    }
+
+    .container {
+        padding-left: 60px;
+    }
+}
+
+
+
